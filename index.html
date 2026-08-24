@@ -30,7 +30,6 @@
     margin:0 0 1.2rem;background:var(--hit)}
   .pick .meta{margin-bottom:.6rem}
   .alt{border-top:1px solid var(--line);margin-top:1.4rem;padding-top:1.2rem}
-  .alt h3{font-size:.95rem;margin:0 0 .1rem}
   table{border-collapse:collapse;width:100%;font-size:.9rem;margin:.5rem 0 1rem}
   th,td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid var(--line)}
   th{font-weight:600;color:var(--muted);font-size:.8rem;text-transform:uppercase;
@@ -40,6 +39,7 @@
   .scroll{overflow-x:auto}
   p{margin:0 0 .9rem}
   .note{font-size:.9rem;color:var(--muted)}
+  code{font-size:.85em;background:var(--hit);padding:.1em .35em;border-radius:4px}
   footer{color:var(--muted);font-size:.85rem;margin-top:2.5rem;
     border-top:1px solid var(--line);padding-top:1.2rem}
 </style>
@@ -48,86 +48,102 @@
 <div class="wrap">
 
 <h1>Gilyaz 04 und 05 — zur Abnahme</h1>
-<p class="lede">COGITO Kids · Stand 24. August 2026 · zweite Runde</p>
+<p class="lede">COGITO Kids · Stand 24. August 2026 · dritte Runde</p>
 
 <section>
   <h2>Gilyaz 04 — Body Scan</h2>
-  <p class="meta">2:39</p>
+  <p class="meta">2:40</p>
 
   <div class="pick">
-    <p class="meta"><strong>Die Fassung zum Anhören</strong></p>
+    <p class="meta"><strong>Der Absatz „Ich stelle mir vor…“ läuft jetzt auf 9,9
+      statt 11,1</strong></p>
     <audio controls preload="none" src="audio/Gilyaz-04-Body-Scan.mp3"></audio>
   </div>
 
-  <p>Rückmeldung war: der Absatz ab „Ich stelle mir vor…“, bei 1:19 bis etwa
-  1:39, ist zu langsam und soll so schnell laufen wie der Schluss.</p>
-
-  <p>Der Absatz stand zwischen den Check-Zeilen und war deshalb versehentlich
-  mit der Liste zusammen gedehnt. Er ist jetzt ein eigener Abschnitt und läuft
-  im Tempo des Schlusses.</p>
+  <p>Zuletzt war der Absatz auf 11,1 Zeichen je Sekunde, also exakt auf dem
+  Tempo des Schlusses — und damit eine Spur zu schnell. Er liegt jetzt leicht
+  darunter.</p>
 
   <div class="scroll">
   <table>
-    <tr><th>Abschnitt</th><th class="num">vorher</th><th class="num">jetzt</th></tr>
-    <tr><td>Einleitung „Ich liege auf dem Rücken…“</td>
-        <td class="num">11,2</td><td class="num">11,2</td></tr>
-    <tr><td>Liste „Linker Fuß. Check.“</td>
-        <td class="num">4,8</td><td class="num">4,3</td></tr>
-    <tr><td>„Ich stelle mir vor…“</td>
-        <td class="num">5,9</td><td class="num"><strong class="hit">11,1</strong></td></tr>
-    <tr><td>Schluss „Oma Bärbel hat mir…“</td>
-        <td class="num">11,2</td><td class="num">11,2</td></tr>
-    <tr><td>Merksatz</td><td class="num">11,4</td><td class="num">11,4</td></tr>
+    <tr><th>Fassung</th><th class="num">Absatz</th><th class="num">Schluss</th><th>Urteil</th></tr>
+    <tr><td>erste Runde</td><td class="num">5,9</td><td class="num">11,2</td><td>zu langsam</td></tr>
+    <tr><td>zweite Runde</td><td class="num">11,1</td><td class="num">11,2</td><td>etwas zu schnell</td></tr>
+    <tr><td><strong>jetzt</strong></td><td class="num"><strong class="hit">9,9</strong></td>
+        <td class="num">11,2</td><td>—</td></tr>
   </table>
   </div>
-  <p class="note">Zeichen je Sekunde. Der Absatz liegt jetzt auf 11,1 gegenüber
-  11,2 im Schluss — also gleich schnell. Langsam ist nur noch die
-  Körperteil-Liste selbst.</p>
+  <p class="note">Zeichen je Sekunde. Nur dieser eine Absatz ist verändert;
+  Einleitung (11,2), Liste (4,3), Schluss (11,2) und Merksatz (11,4) sind
+  unangetastet.</p>
 
   <div class="alt">
-    <h3>Falls der Übergang zu abrupt wirkt</h3>
-    <p class="meta">derselbe Absatz auf 9,9 statt 11,1 — etwas weniger scharf abgesetzt</p>
-    <audio controls preload="none" src="audio/Gilyaz-04-Body-Scan-sanfter.mp3"></audio>
+    <p class="meta">Falls 9,9 immer noch zu schnell ist, zwei weitere Stufen:</p>
+    <p class="meta">9,2 Zeichen je Sekunde</p>
+    <audio controls preload="none" src="audio/Gilyaz-04-Body-Scan-langsamer.mp3"></audio>
+    <p class="meta">8,5 Zeichen je Sekunde</p>
+    <audio controls preload="none" src="audio/Gilyaz-04-Body-Scan-noch-langsamer.mp3"></audio>
   </div>
 </section>
 
 <section>
   <h2>Gilyaz 05 — Grübelitis</h2>
-  <p class="meta">drei neue Aufnahmen · je 1:36 bis 1:40</p>
 
-  <p><strong>Zur Frage nach der Stimme:</strong> es ist dieselbe. Verwendet wird
-  die Stimm-ID, mit der auch alle bisherigen Gilyaz-Spuren erzeugt wurden;
-  ElevenLabs führt sie als deutsche Standardstimme. Eine Verwechslung ist es
-  also nicht — es ist das Modell, das beim Sprechen abdriftet.</p>
+  <p><strong>Die Stimme heisst „Milly Maple – Cool and Bright“</strong>
+  (<code>VD1if7jDVYtAKs4P0FIY</code>). Es ist dieselbe, mit der alle 15
+  Gilyaz-Übungen erzeugt wurden — verwechselt wurde nichts.</p>
 
-  <p>Zwei Dinge sind deshalb geändert. Erstens steht die Aufnahme jetzt auf der
-  Stufe <em>Robust</em> statt <em>Creative</em>; Creative erlaubt dem Modell
-  ausdrücklich, sich von der Stimmvorlage zu entfernen. Zweitens ist die Sprache
-  jetzt <strong>fest auf Deutsch gesetzt</strong>. Das war vorher nicht der Fall
-  — das Modell hat die Aussprache allein aus dem Text abgeleitet, und genau
-  dabei kann eine regionale Färbung entstehen. Das ist der Hebel, der bisher
-  fehlte.</p>
+  <p>Beim erneuten Vergleich ist aber etwas aufgefallen, das die Färbung
+  erklärt. ElevenLabs führt zu jeder Stimme, in welchen Sprachen sie geprüft
+  ist:</p>
 
-  <p>Drei Versuche, weil jede Aufnahme eine eigene Darbietung ist:</p>
-
-  <div class="pick">
-    <p class="meta"><strong>Nehmen 1</strong> — trifft die Stimmlage der
-      ausgelieferten Fassung exakt (262 Hz)</p>
-    <audio controls preload="none" src="audio/Gilyaz-05-Gruebelitis-1.mp3"></audio>
+  <div class="scroll">
+  <table>
+    <tr><th>Stimme</th><th class="num">Sprachen</th><th class="num">davon Deutsch</th></tr>
+    <tr><td>Manni — Toms neue Stimme, abgenommen</td>
+        <td class="num">1</td><td class="num"><strong class="hit">100 %</strong></td></tr>
+    <tr><td>Milly — Gilyaz heute</td><td class="num">22</td><td class="num">17 %</td></tr>
+    <tr><td>Yuna — Corie heute</td><td class="num">17</td><td class="num">8 %</td></tr>
+  </table>
   </div>
 
-  <p class="meta">Nehmen 2 — 246 Hz</p>
-  <audio controls preload="none" src="audio/Gilyaz-05-Gruebelitis-2.mp3"></audio>
+  <p>Milly ist eine mehrsprachige Charakterstimme; Deutsch ist dort nur ein
+  Fall von zweiundzwanzig. Genau solche Stimmen kippen beim Sprechen in eine
+  fremde Färbung, und weder eine andere Stabilitätsstufe noch das Festnageln der
+  Sprache ändert daran etwas — beides wurde versucht. Toms Stimme, die
+  unbeanstandet blieb, ist dagegen ausschliesslich auf Deutsch geprüft.</p>
 
-  <p class="meta">Nehmen 3 — 239 Hz</p>
-  <audio controls preload="none" src="audio/Gilyaz-05-Gruebelitis-3.mp3"></audio>
+  <p>Deshalb hier drei <strong>reine deutsche Stimmen</strong> — je nur auf
+  Deutsch geprüft, ohne regionale Kennzeichnung. Derselbe Text, gleiche
+  Einstellungen:</p>
 
-  <p class="note">Zum Einordnen: die ausgelieferte Fassung liegt bei 262 Hz, die
-  übrigen Gilyaz-Spuren zwischen 242 und 296 Hz. Eine Färbung lässt sich nicht
-  messen, die Stimmlage schon — deshalb steht Nehmen 1 oben. Wenn auch diese
-  Runde noch österreichisch klingt, bitte kurz sagen: dann liegt es nicht an der
-  Einstellung, sondern an dieser Stimme bei diesem Text, und wir sollten über
-  eine andere Stimme für Gilyaz sprechen.</p>
+  <div class="pick">
+    <p class="meta"><strong>Stimme 1 — Emily</strong> · 246 Hz, trifft die
+      Gilyaz-Lage am besten</p>
+    <audio controls preload="none" src="audio/Gruebelitis-Stimme-1-Emily.mp3"></audio>
+  </div>
+
+  <p class="meta">Stimme 2 — Katharina · 235 Hz</p>
+  <audio controls preload="none" src="audio/Gruebelitis-Stimme-2-Katharina.mp3"></audio>
+
+  <p class="meta">Stimme 3 — Nadine · 205 Hz, hörbar tiefer</p>
+  <audio controls preload="none" src="audio/Gruebelitis-Stimme-3-Nadine.mp3"></audio>
+
+  <div class="alt">
+    <p class="meta">Zum Vergleich: die ausgelieferte Fassung mit Milly · 262 Hz</p>
+    <audio controls preload="none" src="audio/Gruebelitis-BISHER-Milly.mp3"></audio>
+  </div>
+
+  <p class="note">Die übrigen Gilyaz-Spuren liegen zwischen 242 und 296 Hz;
+  Gilyaz ist fünfzehn. Eine vierte Kandidatin (Darinka) wurde aussortiert, sie
+  lag mit 155 Hz im Bereich einer erwachsenen Frau.</p>
+
+  <p><strong>Wichtig zur Entscheidung:</strong> wenn eine dieser Stimmen
+  überzeugt, betrifft das nicht nur Grübelitis. Gilyaz kann nicht in einer
+  Übung anders klingen als in den anderen vierzehn — es wären dann <strong>alle
+  15 Übungen neu einzusprechen</strong>. Das ist machbar, aber es ist eine
+  Entscheidung und keine Korrektur. Bitte deshalb erst hören und melden, welche
+  Stimme es sein soll; erst danach produzieren wir den Rest.</p>
 </section>
 
 <footer>
