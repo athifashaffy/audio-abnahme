@@ -8,11 +8,11 @@
 <style>
   :root{
     --bg:#fbfaf8; --fg:#1c1b19; --muted:#6b6862; --line:#e3ded6;
-    --card:#ffffff; --accent:#7a5c3e;
+    --card:#ffffff; --accent:#7a5c3e; --hit:#f4efe7;
   }
   @media (prefers-color-scheme: dark){
     :root{ --bg:#161513; --fg:#eceae6; --muted:#9a958c; --line:#302d29;
-           --card:#1e1d1a; --accent:#c9a67c; }
+           --card:#1e1d1a; --accent:#c9a67c; --hit:#26231e; }
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--fg);
@@ -26,6 +26,9 @@
   section{background:var(--card);border:1px solid var(--line);border-radius:12px;
     padding:1.4rem 1.4rem 1.6rem;margin-bottom:1.5rem}
   audio{width:100%;margin:.35rem 0 1.1rem;display:block}
+  .pick{border:1px solid var(--accent);border-radius:10px;padding:1rem 1rem .4rem;
+    margin:0 0 1.2rem;background:var(--hit)}
+  .pick .meta{margin-bottom:.6rem}
   .alt{border-top:1px solid var(--line);margin-top:1.4rem;padding-top:1.2rem}
   .alt h3{font-size:.95rem;margin:0 0 .1rem}
   table{border-collapse:collapse;width:100%;font-size:.9rem;margin:.5rem 0 1rem}
@@ -39,86 +42,92 @@
   .note{font-size:.9rem;color:var(--muted)}
   footer{color:var(--muted);font-size:.85rem;margin-top:2.5rem;
     border-top:1px solid var(--line);padding-top:1.2rem}
-  code{font-size:.85em;background:var(--line);padding:.1em .35em;border-radius:4px}
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <h1>Gilyaz 04 und 05 — zur Abnahme</h1>
-<p class="lede">COGITO Kids · Stand 23. August 2026 · zum Anhören direkt im Browser</p>
+<p class="lede">COGITO Kids · Stand 24. August 2026 · zweite Runde</p>
 
 <section>
   <h2>Gilyaz 04 — Body Scan</h2>
-  <p class="meta">2:49</p>
-  <audio controls preload="none" src="audio/Gilyaz-04-Body-Scan.mp3"></audio>
+  <p class="meta">2:39</p>
 
-  <p>Rückmeldung war: die Einleitung soll so schnell sein wie der Schluss, nur
-  die Körperteil-Liste langsamer. So ist es jetzt gesetzt.</p>
+  <div class="pick">
+    <p class="meta"><strong>Die Fassung zum Anhören</strong></p>
+    <audio controls preload="none" src="audio/Gilyaz-04-Body-Scan.mp3"></audio>
+  </div>
+
+  <p>Rückmeldung war: der Absatz ab „Ich stelle mir vor…“, bei 1:19 bis etwa
+  1:39, ist zu langsam und soll so schnell laufen wie der Schluss.</p>
+
+  <p>Der Absatz stand zwischen den Check-Zeilen und war deshalb versehentlich
+  mit der Liste zusammen gedehnt. Er ist jetzt ein eigener Abschnitt und läuft
+  im Tempo des Schlusses.</p>
 
   <div class="scroll">
   <table>
     <tr><th>Abschnitt</th><th class="num">vorher</th><th class="num">jetzt</th></tr>
     <tr><td>Einleitung „Ich liege auf dem Rücken…“</td>
-        <td class="num">7,3</td><td class="num"><strong class="hit">11,2</strong></td></tr>
+        <td class="num">11,2</td><td class="num">11,2</td></tr>
     <tr><td>Liste „Linker Fuß. Check.“</td>
-        <td class="num">6,0</td><td class="num"><strong class="hit">4,8</strong></td></tr>
+        <td class="num">4,8</td><td class="num">4,3</td></tr>
+    <tr><td>„Ich stelle mir vor…“</td>
+        <td class="num">5,9</td><td class="num"><strong class="hit">11,1</strong></td></tr>
     <tr><td>Schluss „Oma Bärbel hat mir…“</td>
         <td class="num">11,2</td><td class="num">11,2</td></tr>
     <tr><td>Merksatz</td><td class="num">11,4</td><td class="num">11,4</td></tr>
   </table>
   </div>
-  <p class="note">Zeichen je Sekunde. Einleitung und Schluss liegen jetzt beide
-  exakt auf 11,2; die Liste ist der einzige langsame Teil.</p>
-
-  <p>Es ist <strong>dieselbe Aufnahme</strong> wie zuletzt, nur abschnittsweise
-  im Tempo verändert. Stimme, Betonung, Färbung und Tonhöhe sind unverändert —
-  also keine neue Darbietung. Soll die Liste noch langsamer sein, ist das eine
-  Einstellung und in Minuten geändert.</p>
-</section>
-
-<section>
-  <h2>Gilyaz 05 — Grübelitis</h2>
-  <p class="meta">1:38 · neu eingesprochen</p>
-  <audio controls preload="none" src="audio/Gilyaz-05-Gruebelitis.mp3"></audio>
-
-  <p>Gemeldet war eine fremde Färbung („anderer Dialekt“). Die Ursache liegt
-  vermutlich in einer Einstellung und nicht am Zufall: alle bisherigen Aufnahmen
-  entstehen auf der Stufe <em>Creative</em>. Die klingt lebendiger, erlaubt dem
-  Modell aber, sich von der Stimmvorlage zu entfernen — in Betonung, Haltung und
-  eben auch in der Färbung.</p>
-
-  <p>Diese Aufnahme steht auf <em>Natural</em>, also derselben Stufe wie der
-  Body Scan oben, bei dem die Stimme nicht beanstandet wurde.</p>
+  <p class="note">Zeichen je Sekunde. Der Absatz liegt jetzt auf 11,1 gegenüber
+  11,2 im Schluss — also gleich schnell. Langsam ist nur noch die
+  Körperteil-Liste selbst.</p>
 
   <div class="alt">
-    <h3>Alternative: Stufe Robust</h3>
-    <p class="meta">noch näher an der Stimmvorlage, dafür etwas gleichförmiger</p>
-    <audio controls preload="none"
-           src="audio/Gilyaz-05-Gruebelitis-Alternative-Robust.mp3"></audio>
-
-    <div class="scroll">
-    <table>
-      <tr><th>Fassung</th><th class="num">Stimmlage</th></tr>
-      <tr><td>bisher ausgeliefert</td><td class="num">262 Hz</td></tr>
-      <tr><td>Natural — oben</td><td class="num">239 Hz</td></tr>
-      <tr><td>Robust — hier</td><td class="num">271 Hz</td></tr>
-    </table>
-    </div>
-    <p class="note">Ein Dialekt lässt sich nicht messen, die Stimmlage schon.
-    Die übrigen Gilyaz-Spuren liegen zwischen 242 und 296 Hz. Robust trifft die
-    bisherige Lage genauer, Natural ist die Stufe, die beim Body Scan
-    funktioniert hat. Deshalb beide hier — bitte kurz gegenhören und sagen,
-    welche es sein soll.</p>
+    <h3>Falls der Übergang zu abrupt wirkt</h3>
+    <p class="meta">derselbe Absatz auf 9,9 statt 11,1 — etwas weniger scharf abgesetzt</p>
+    <audio controls preload="none" src="audio/Gilyaz-04-Body-Scan-sanfter.mp3"></audio>
   </div>
 </section>
 
 <section>
-  <h2>Wenn beide passen</h2>
-  <p>Dann wäre zu klären, ob die übrigen 13 Gilyaz-Spuren und die anderen
-  Charaktere langfristig ebenfalls auf die stabilere Stufe umgestellt werden.
-  Das wäre eine Neuaufnahme aller Spuren und damit eine eigene Entscheidung —
-  die bisherigen Aufnahmen sind ja abgenommen.</p>
+  <h2>Gilyaz 05 — Grübelitis</h2>
+  <p class="meta">drei neue Aufnahmen · je 1:36 bis 1:40</p>
+
+  <p><strong>Zur Frage nach der Stimme:</strong> es ist dieselbe. Verwendet wird
+  die Stimm-ID, mit der auch alle bisherigen Gilyaz-Spuren erzeugt wurden;
+  ElevenLabs führt sie als deutsche Standardstimme. Eine Verwechslung ist es
+  also nicht — es ist das Modell, das beim Sprechen abdriftet.</p>
+
+  <p>Zwei Dinge sind deshalb geändert. Erstens steht die Aufnahme jetzt auf der
+  Stufe <em>Robust</em> statt <em>Creative</em>; Creative erlaubt dem Modell
+  ausdrücklich, sich von der Stimmvorlage zu entfernen. Zweitens ist die Sprache
+  jetzt <strong>fest auf Deutsch gesetzt</strong>. Das war vorher nicht der Fall
+  — das Modell hat die Aussprache allein aus dem Text abgeleitet, und genau
+  dabei kann eine regionale Färbung entstehen. Das ist der Hebel, der bisher
+  fehlte.</p>
+
+  <p>Drei Versuche, weil jede Aufnahme eine eigene Darbietung ist:</p>
+
+  <div class="pick">
+    <p class="meta"><strong>Nehmen 1</strong> — trifft die Stimmlage der
+      ausgelieferten Fassung exakt (262 Hz)</p>
+    <audio controls preload="none" src="audio/Gilyaz-05-Gruebelitis-1.mp3"></audio>
+  </div>
+
+  <p class="meta">Nehmen 2 — 246 Hz</p>
+  <audio controls preload="none" src="audio/Gilyaz-05-Gruebelitis-2.mp3"></audio>
+
+  <p class="meta">Nehmen 3 — 239 Hz</p>
+  <audio controls preload="none" src="audio/Gilyaz-05-Gruebelitis-3.mp3"></audio>
+
+  <p class="note">Zum Einordnen: die ausgelieferte Fassung liegt bei 262 Hz, die
+  übrigen Gilyaz-Spuren zwischen 242 und 296 Hz. Eine Färbung lässt sich nicht
+  messen, die Stimmlage schon — deshalb steht Nehmen 1 oben. Wenn auch diese
+  Runde noch österreichisch klingt, bitte kurz sagen: dann liegt es nicht an der
+  Einstellung, sondern an dieser Stimme bei diesem Text, und wir sollten über
+  eine andere Stimme für Gilyaz sprechen.</p>
 </section>
 
 <footer>
