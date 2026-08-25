@@ -42,6 +42,35 @@
   code{font-size:.85em;background:var(--hit);padding:.1em .35em;border-radius:4px}
   footer{color:var(--muted);font-size:.85rem;margin-top:2.5rem;
     border-top:1px solid var(--line);padding-top:1.2rem}
+
+  .rm{margin:.2rem 0 1.3rem}
+  .rm .chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .5rem}
+  .rm button{font:inherit;font-size:.82rem;padding:.3rem .7rem;cursor:pointer;
+    border:1px solid var(--line);border-radius:999px;background:var(--card);
+    color:var(--fg);line-height:1.4}
+  .rm button:hover{border-color:var(--accent)}
+  .rm button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);
+    color:var(--bg);font-weight:600}
+  .rm button.mark{border-style:dashed;color:var(--muted)}
+  .rm button.mark:hover{color:var(--accent)}
+  .rm textarea{width:100%;min-height:2.4rem;font:inherit;font-size:.9rem;
+    padding:.5rem .6rem;border:1px solid var(--line);border-radius:8px;
+    background:var(--bg);color:var(--fg);resize:vertical}
+  .rm textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+  #sammler{position:sticky;bottom:0;background:var(--card);border:1px solid var(--accent);
+    border-radius:12px;padding:1.1rem 1.2rem;margin:2.5rem 0 0;
+    box-shadow:0 -2px 16px rgba(0,0,0,.10)}
+  #sammler h2{margin-bottom:.5rem}
+  #sammler .zeile{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+  #sammler button{font:inherit;font-size:.92rem;padding:.55rem 1.1rem;cursor:pointer;
+    border-radius:8px;border:1px solid var(--accent);background:var(--accent);
+    color:var(--bg);font-weight:600}
+  #sammler button.zweit{background:var(--card);color:var(--fg);border-color:var(--line)}
+  #sammler textarea{width:100%;min-height:9rem;margin-top:.9rem;font-size:.85rem;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;padding:.7rem;
+    border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg)}
+  #status{font-size:.85rem;color:var(--accent);font-weight:600}
+  @media print{ .rm button,#sammler{display:none} }
 </style>
 </head>
 <body>
@@ -50,13 +79,28 @@
 <h1>Gilyaz 04 und 05 — zur Abnahme</h1>
 <p class="lede">COGITO Kids · Stand 24. August 2026 · vierte Runde</p>
 
+<section style="border-color:var(--accent)">
+  <h2>Neu: Rückmeldung direkt auf der Seite</h2>
+  <p>Unter jedem Abspieler stehen jetzt ein paar Knöpfe und ein Feld für
+  Anmerkungen. Ganz unten fasst ein Knopf alles zu einem Text zusammen, der
+  sich verschicken lässt.</p>
+  <p><strong>Der Knopf „⏱ Stelle merken“ ist der wichtigste.</strong> Während
+  das Hörbeispiel läuft, einmal darauf tippen — die Zeit wird übernommen. Aus
+  „irgendwo in der Mitte wieder südlich“ wird damit „bei 0:48“, und genau
+  solche Angaben lassen sich gezielt nachbessern. Mehrfach tippen geht, dann
+  werden mehrere Stellen gesammelt.</p>
+  <p class="note">Nichts wird automatisch verschickt und nichts gespeichert —
+  der Text landet in der Zwischenablage beziehungsweise im Mailprogramm, und
+  Sie entscheiden, was davon rausgeht.</p>
+</section>
+
 <section>
   <h2>Gilyaz 04 — Body Scan</h2>
 
   <div class="pick">
     <p class="meta"><strong>Der Absatz „Ich stelle mir vor…“ läuft jetzt auf 9,2</strong>
       — eine Stufe langsamer als zuletzt</p>
-    <audio controls preload="none" src="audio/Gilyaz-04-Body-Scan-langsamer.mp3"></audio>
+    <audio data-titel="Body Scan — 9,2 (Hauptfassung)" controls preload="none" src="audio/Gilyaz-04-Body-Scan-langsamer.mp3"></audio>
   </div>
 
   <p>Rückmeldung war, dass 9,9 noch eine Spur zu schnell ist. Diese Fassung
@@ -78,9 +122,9 @@
   <div class="alt">
     <p class="meta">Die Nachbarstufen, falls 9,2 daneben liegt:</p>
     <p class="meta">9,9 — die Fassung aus der dritten Runde</p>
-    <audio controls preload="none" src="audio/Gilyaz-04-Body-Scan.mp3"></audio>
+    <audio data-titel="Body Scan — 9,9" controls preload="none" src="audio/Gilyaz-04-Body-Scan.mp3"></audio>
     <p class="meta">8,5 — noch eine Stufe langsamer</p>
-    <audio controls preload="none" src="audio/Gilyaz-04-Body-Scan-noch-langsamer.mp3"></audio>
+    <audio data-titel="Body Scan — 8,5" controls preload="none" src="audio/Gilyaz-04-Body-Scan-noch-langsamer.mp3"></audio>
   </div>
 </section>
 
@@ -100,7 +144,7 @@
   <div class="pick">
     <p class="meta"><strong>Fassung 1 — abschnittsweise gesprochen</strong> ·
       1:33 · kein Stück länger als die Ausschnitte, die funktioniert haben</p>
-    <audio controls preload="none" src="audio/Gruebelitis-abschnittsweise.mp3"></audio>
+    <audio data-titel="Grübelitis — Fassung 1, abschnittsweise" controls preload="none" src="audio/Gruebelitis-abschnittsweise.mp3"></audio>
   </div>
 
   <p>Jeder Absatz ist eine eigene Aufnahme. Die Nahtstellen liegen in den
@@ -110,7 +154,7 @@
   <div class="pick">
     <p class="meta"><strong>Fassung 2 — am Stück, Schreibweise aus B</strong>
       · 1:37</p>
-    <audio controls preload="none" src="audio/Gruebelitis-B-am-Stueck.mp3"></audio>
+    <audio data-titel="Grübelitis — Fassung 2, am Stück" controls preload="none" src="audio/Gruebelitis-B-am-Stueck.mp3"></audio>
   </div>
 
   <p>Wie bisher in einem Zug gesprochen, aber mit der getrennten Schreibweise
@@ -150,13 +194,13 @@
   dieselben Einstellungen — verändert ist nur die Schreibweise:</p>
 
   <p class="meta">A — „Grübelitis“, unverändert (die Kontrolle)</p>
-  <audio controls preload="none" src="audio/Worttest-A-Gruebelitis.mp3"></audio>
+  <audio data-titel="Worttest A — Wort unverändert" controls preload="none" src="audio/Worttest-A-Gruebelitis.mp3"></audio>
 
   <p class="meta">B — „Grübel-itis“, mit Bindestrich getrennt</p>
-  <audio controls preload="none" src="audio/Worttest-B-getrennt.mp3"></audio>
+  <audio data-titel="Worttest B — getrennt geschrieben" controls preload="none" src="audio/Worttest-B-getrennt.mp3"></audio>
 
   <p class="meta">C — Wort komplett ersetzt durch „Grübelzwang“</p>
-  <audio controls preload="none" src="audio/Worttest-C-Gruebelzwang.mp3"></audio>
+  <audio data-titel="Worttest C — Wort ersetzt" controls preload="none" src="audio/Worttest-C-Gruebelzwang.mp3"></audio>
 
   <p><strong>Wenn B oder C sauber klingen und A nicht</strong>, ist die Sache
   erledigt: dann liegt es am Wort, nicht an der Stimme, und es genügt, dem
@@ -197,18 +241,18 @@
   <div class="pick">
     <p class="meta"><strong>Stimme 1 — Emily</strong> · 246 Hz, trifft die
       Gilyaz-Lage am besten</p>
-    <audio controls preload="none" src="audio/Gruebelitis-Stimme-1-Emily.mp3"></audio>
+    <audio data-titel="Stimme 1 — Emily" controls preload="none" src="audio/Gruebelitis-Stimme-1-Emily.mp3"></audio>
   </div>
 
   <p class="meta">Stimme 2 — Katharina · 235 Hz</p>
-  <audio controls preload="none" src="audio/Gruebelitis-Stimme-2-Katharina.mp3"></audio>
+  <audio data-titel="Stimme 2 — Katharina" controls preload="none" src="audio/Gruebelitis-Stimme-2-Katharina.mp3"></audio>
 
   <p class="meta">Stimme 3 — Nadine · 205 Hz, hörbar tiefer</p>
-  <audio controls preload="none" src="audio/Gruebelitis-Stimme-3-Nadine.mp3"></audio>
+  <audio data-titel="Stimme 3 — Nadine" controls preload="none" src="audio/Gruebelitis-Stimme-3-Nadine.mp3"></audio>
 
   <div class="alt">
     <p class="meta">Zum Vergleich: die ausgelieferte Fassung mit Milly · 262 Hz</p>
-    <audio controls preload="none" src="audio/Gruebelitis-BISHER-Milly.mp3"></audio>
+    <audio data-titel="Grübelitis — bisher, Milly" controls preload="none" src="audio/Gruebelitis-BISHER-Milly.mp3"></audio>
   </div>
 
   <p class="note">Die übrigen Gilyaz-Spuren liegen zwischen 242 und 296 Hz;
@@ -227,11 +271,141 @@
   </details>
 </section>
 
+
+<div id="sammler">
+  <h2>Rückmeldung abschicken</h2>
+  <p class="meta">Alles Ausgefüllte wird zu einem Text zusammengefasst — dann an
+  Athif schicken, wie gewohnt. Leere Felder werden weggelassen.</p>
+  <div class="zeile">
+    <button id="kopieren" type="button">Rückmeldung kopieren</button>
+    <button id="mailen" class="zweit" type="button">Als E-Mail öffnen</button>
+    <span id="status"></span>
+  </div>
+  <textarea id="ausgabe" style="display:none" readonly></textarea>
+</div>
+
 <footer>
   Technisch unverändert: MP3, Mono, 44,1 kHz, 160 kbit/s, normalisiert auf
   −16 LUFS. Dieselben Werte wie die übrige Lieferung.
 </footer>
 
 </div>
+
+<script>
+(function () {
+  var URTEILE = ['passt', 'Dialekt', 'zu schnell', 'zu langsam'];
+
+  function mmss(s) {
+    s = Math.max(0, Math.floor(s || 0));
+    return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
+  }
+
+  var eintraege = [];
+
+  document.querySelectorAll('audio[data-titel]').forEach(function (audio) {
+    var titel = audio.getAttribute('data-titel');
+    var box = document.createElement('div');
+    box.className = 'rm';
+
+    var chips = document.createElement('div');
+    chips.className = 'chips';
+
+    var gewaehlt = [];
+    URTEILE.forEach(function (u) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = u;
+      b.setAttribute('aria-pressed', 'false');
+      b.addEventListener('click', function () {
+        var an = b.getAttribute('aria-pressed') === 'true';
+        b.setAttribute('aria-pressed', an ? 'false' : 'true');
+        if (an) { gewaehlt = gewaehlt.filter(function (x) { return x !== u; }); }
+        else { gewaehlt.push(u); }
+      });
+      chips.appendChild(b);
+    });
+
+    var stellen = [];
+    var merk = document.createElement('button');
+    merk.type = 'button';
+    merk.className = 'mark';
+    merk.textContent = '⏱ Stelle merken';
+    merk.title = 'Übernimmt die gerade laufende Abspielzeit';
+    merk.addEventListener('click', function () {
+      var t = mmss(audio.currentTime);
+      stellen.push(t);
+      merk.textContent = '⏱ ' + stellen.join(', ');
+      notiz.focus();
+    });
+    chips.appendChild(merk);
+    box.appendChild(chips);
+
+    var notiz = document.createElement('textarea');
+    notiz.placeholder = 'Anmerkung zu „' + titel + '“ …';
+    notiz.rows = 2;
+    box.appendChild(notiz);
+
+    audio.insertAdjacentElement('afterend', box);
+    eintraege.push({
+      titel: titel,
+      urteile: function () { return gewaehlt; },
+      stellen: function () { return stellen; },
+      notiz: function () { return notiz.value.trim(); }
+    });
+  });
+
+  function bauen() {
+    var d = new Date();
+    var datum = String(d.getDate()).padStart(2, '0') + '.' +
+                String(d.getMonth() + 1).padStart(2, '0') + '.' + d.getFullYear();
+    var zeilen = ['Rückmeldung Gilyaz — ' + datum, ''];
+    var etwas = false;
+    eintraege.forEach(function (e) {
+      var u = e.urteile(), s = e.stellen(), n = e.notiz();
+      if (!u.length && !s.length && !n) { return; }
+      etwas = true;
+      zeilen.push(e.titel);
+      var kopf = [];
+      if (u.length) { kopf.push(u.join(' · ')); }
+      if (s.length) { kopf.push('Stellen: ' + s.join(', ')); }
+      if (kopf.length) { zeilen.push('  ' + kopf.join('  |  ')); }
+      if (n) { n.split('\n').forEach(function (z) { zeilen.push('  ' + z); }); }
+      zeilen.push('');
+    });
+    if (!etwas) { return null; }
+    return zeilen.join('\n').trim() + '\n';
+  }
+
+  var raus = document.getElementById('ausgabe');
+  var status = document.getElementById('status');
+
+  document.getElementById('kopieren').addEventListener('click', function () {
+    var text = bauen();
+    if (!text) {
+      status.textContent = 'Noch nichts ausgefüllt.';
+      return;
+    }
+    raus.value = text;
+    raus.style.display = 'block';
+    var fertig = function () { status.textContent = '✓ In der Zwischenablage.'; };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(fertig, function () {
+        raus.select();
+        status.textContent = 'Bitte von Hand kopieren (Text ist markiert).';
+      });
+    } else {
+      raus.select();
+      status.textContent = 'Bitte von Hand kopieren (Text ist markiert).';
+    }
+  });
+
+  document.getElementById('mailen').addEventListener('click', function () {
+    var text = bauen();
+    if (!text) { status.textContent = 'Noch nichts ausgefüllt.'; return; }
+    location.href = 'mailto:?subject=' + encodeURIComponent('Rückmeldung Gilyaz') +
+                    '&body=' + encodeURIComponent(text);
+  });
+})();
+</script>
 </body>
 </html>
